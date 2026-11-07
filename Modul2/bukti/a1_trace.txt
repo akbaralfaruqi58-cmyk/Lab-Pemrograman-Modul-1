@@ -1,0 +1,37 @@
+insert #1 RP-001   m=8 n=1 lambda=0.125 rehash=0
+   [0] -> RP-001
+insert #2 AR-001   m=8 n=2 lambda=0.25 rehash=0
+   [0] -> RP-001
+   [6] -> AR-001
+insert #3 MP-001   m=8 n=3 lambda=0.375 rehash=0
+   [0] -> RP-001
+   [6] -> AR-001
+   [7] -> MP-001
+insert #4 RP-002   m=8 n=4 lambda=0.5 rehash=0
+   [0] -> RP-001
+   [6] -> RP-002 -> AR-001
+   [7] -> MP-001
+insert #5 AR-002   m=8 n=5 lambda=0.625 rehash=0
+   [0] -> RP-001
+   [1] -> AR-002
+   [6] -> RP-002 -> AR-001
+   [7] -> MP-001
+insert #6 MP-002   m=8 n=6 lambda=0.75 rehash=0
+   [0] -> RP-001
+   [1] -> AR-002
+   [6] -> RP-002 -> AR-001
+   [7] -> MP-002 -> MP-001
+insert #7 RP-003   m=8 n=7 lambda=0.875 rehash=0
+   [0] -> RP-001
+   [1] -> AR-002
+   [4] -> RP-003
+   [6] -> RP-002 -> AR-001
+   [7] -> MP-002 -> MP-001
+insert #8 AR-003   m=16 n=8 lambda=0.5 rehash=1
+   [1] -> AR-002
+   [6] -> RP-002
+   [7] -> MP-001
+   [8] -> RP-001
+   [12] -> RP-003
+   [14] -> AR-001
+   [15] -> AR-003 -> MP-002

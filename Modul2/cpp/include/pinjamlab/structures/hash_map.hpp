@@ -10,6 +10,7 @@
 #include <optional>
 #include <utility>
 #include <vector>
+#include <ostream>
 
 namespace pinjamlab::structures {
 
@@ -112,6 +113,15 @@ public:
         return Hash{}(key) % buckets_.size();
     }
 
+        void dump(std::ostream& os) const {
+        for (std::size_t b = 0; b < buckets_.size(); ++b) {
+            if (!buckets_[b]) continue;
+            os << "   [" << b << "]";
+            for (const Node* n = buckets_[b]; n; n = n->next) os << " -> " << n->key;
+            os << '\n';
+        }
+    }
+    
     void rehash(std::size_t newCount) {
         if (newCount <= buckets_.size()) return;
         std::vector<Node*> old(newCount, nullptr);
