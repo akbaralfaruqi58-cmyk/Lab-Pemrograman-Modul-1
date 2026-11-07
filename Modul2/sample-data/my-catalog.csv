@@ -1,0 +1,54 @@
+tag,model,category,daily_fine,condition
+RP-001,Raspberry Pi 4 Model B 4GB,Embedded,35000,GOOD
+AR-001,Arduino Uno R3,Embedded,25000,GOOD
+MP-001,Intel NUC 11 Essential,MiniPC,100000,GOOD
+RP-002,Raspberry Pi 4 Model B 4GB,Embedded,35000,GOOD
+AR-002,Arduino Uno R3,Embedded,25000,GOOD
+MP-002,Intel NUC 11 Essential,MiniPC,100000,GOOD
+RP-003,Raspberry Pi 4 Model B 4GB,Embedded,35000,GOOD
+AR-003,Arduino Uno R3,Embedded,25000,GOOD
+MP-003,Intel NUC 11 Essential,MiniPC,100000,GOOD
+RP-004,Raspberry Pi 4 Model B 4GB,Embedded,35000,GOOD
+AR-004,Arduino Uno R3,Embedded,25000,NEEDS_CHECK
+MP-004,Intel NUC 11 Essential,MiniPC,100000,GOOD
+RP-005,Raspberry Pi 4 Model B 4GB,Embedded,35000,GOOD
+RP-005,Raspberry Pi 4 Model B 4GB,Embedded,35000,GOOD
+AR-005,Arduino Uno R3,Embedded,25000,GOOD
+MP-005,Beelink SER5,MiniPC,100000,GOOD
+RP-006,Raspberry Pi 4 Model B 4GB,Embedded,35000,GOOD
+AR-006,Arduino Uno R3,Embedded,25000,GOOD
+MP-006,Beelink SER5,MiniPC,100000,NEEDS_CHECK
+RP-007,Raspberry Pi 4 Model B 4GB,Embedded,35000,GOOD
+AR-007,Arduino Uno R3,Embedded,25000,GOOD
+MP-007,Beelink SER5,MiniPC,100000,GOOD
+RP-008,Raspberry Pi 4 Model B 4GB,Embedded,35000,GOOD
+AR-008,Arduino Uno R3,Embedded,25000,GOOD
+MP-008,Beelink SER5,MiniPC,100000,GOOD
+RP-009,Raspberry Pi 4 Model B 4GB,Embedded,35000,NEEDS_CHECK
+AR-009,Arduino Uno R3,Embedded,25000,GOOD
+MP-009,ASUS PN41,MiniPC,100000,GOOD
+RP-010,Raspberry Pi 4 Model B 4GB,Embedded,35000,GOOD
+AR-010,Arduino Uno R3,Embedded,25000,GOOD
+MP-010,ASUS PN41,MiniPC,100000,GOOD
+RP-011,Raspberry Pi 4 Model B 8GB,Embedded,35000,GOOD
+AR-011,Arduino Uno R3 SMD,Embedded,25000,GOOD
+MP-011,ASUS PN41,MiniPC,100000,GOOD
+RP-012,Raspberry Pi 4 Model B 8GB,Embedded,35000,GOOD
+AR-012,Arduino Uno R3 SMD,Embedded,25000,NEEDS_CHECK
+MP-012,Lenovo ThinkCentre M70q Tiny,MiniPC,100000,GOOD
+RP-013,Raspberry Pi 4 Model B 8GB,Embedded,35000,NEEDS_CHECK
+AR-013,Arduino Uno R3 SMD,Embedded,25000,GOOD
+MP-013,Lenovo ThinkCentre M70q Tiny,MiniPC,100000,GOOD
+RP-014,Raspberry Pi 4 Model B 8GB,Embedded,35000,GOOD
+AR-014,Arduino Uno R3 SMD,Embedded,25000,GOOD
+MP-014,Lenovo ThinkCentre M70q Tiny,MiniPC,100000,GOOD
+RP-015,Raspberry Pi 5 8GB,Embedded,35000,GOOD
+AR-015,Arduino Uno R4 Minima,Embedded,25000,GOOD
+RP-016,Raspberry Pi 5 8GB,Embedded,35000,GOOD
+AR-016,Arduino Uno R4 Minima,Embedded,25000,GOOD
+RP-017,Raspberry Pi 5 8GB,Embedded,35000,GOOD
+AR-017,Arduino Uno R4 Minima,Embedded,25000,NEEDS_CHECK
+RP-018,Raspberry Pi 5 8GB,Embedded,35000,GOOD
+AR-018,Arduino Uno R4 Minima,Embedded,25000,GOOD
+AR-010,Arduino Uno R3,Embedded,25000,NEEDS_CHECK
+MP-002,Intel NUC 11 Essential,MiniPC,100000,GOOD
