@@ -1,0 +1,18 @@
+C:/msys64/ucrt64/include/c++/16.2.0/debug/safe_iterator.h:392:
+In function:
+    constexpr gnu_debug::_Safe_iterator<_Iterator, _Sequence, _Category>& 
+    gnu_debug::_Safe_iterator<_Iterator, _Sequence, _Category>::operator++() 
+    [with _Iterator = gnu_cxx::normal_iterator<std::
+    cxx11::basic_string<char>*, std::vector<std::cxx11::basic_string<char>, 
+    std::allocator<std::cxx11::basic_string<char> > > >; _Sequence = std::
+    debug::vector<std::cxx11::basic_string<char> >; _Category = 
+    std::forward_iterator_tag]
+
+Error: attempt to increment a singular iterator.
+
+Objects involved in the operation:
+    iterator "this" @ 0000008037FFFAA0 {
+      type = gnu_cxx::normal_iterator<std::cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > (mutable iterator);
+      state = singular;
+      references sequence with type 'std::debug::vector<std::cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >' @ 0000008037FFFBA0
+    }
