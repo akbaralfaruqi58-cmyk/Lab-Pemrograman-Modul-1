@@ -1,0 +1,17 @@
+experiment,label,n,list_ns,dict_ns
+crossover_py,synthetic,1,167.1,39.6
+crossover_py,synthetic,2,205.8,119.0
+crossover_py,synthetic,3,355.1,51.7
+crossover_py,synthetic,4,247.0,51.6
+crossover_py,synthetic,6,295.9,62.2
+crossover_py,synthetic,8,354.9,57.1
+crossover_py,synthetic,10,377.0,55.4
+crossover_py,synthetic,12,419.6,52.4
+crossover_py,synthetic,16,512.3,55.7
+crossover_py,synthetic,20,604.8,57.7
+crossover_py,synthetic,25,702.5,53.8
+crossover_py,synthetic,32,855.3,55.8
+crossover_py,synthetic,64,1651.6,57.9
+crossover_py,synthetic,128,2927.8,59.0
+crossover_py,synthetic,256,5867.5,58.1
+crossover_py,my_catalog,50,1454.1,56.0
