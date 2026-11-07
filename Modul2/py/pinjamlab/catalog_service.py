@@ -54,8 +54,16 @@ class CatalogService:
         inside a loop, not this function.
         """
         q = query.lower()
-        return [i for i in self._repo.all()
-                if q in i.tag.lower() or q in i.model.lower()]
+        matches = [i for i in self._repo.all()
+                   if q in i.tag.lower() or q in i.model.lower()]
+        unique = []                                  # CACAT A: buang duplikat
+        for item in matches:
+            for kept in unique:                      # memindai semua yang sudah disimpan
+                if kept.tag == item.tag:
+                    break
+            else:
+                unique.append(item)
+        return unique
 
     def by_category(self, category: str) -> list[Item]:
         return [i for i in self._repo.all() if i.category == category]

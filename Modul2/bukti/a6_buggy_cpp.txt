@@ -1,0 +1,4 @@
+n=100,search_ms=0.2,hits=100
+n=1000,search_ms=10.6,hits=1000
+n=10000,search_ms=634.8,hits=10000
+n=30000,search_ms=4068.5,hits=30000
