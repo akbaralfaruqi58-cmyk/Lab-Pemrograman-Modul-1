@@ -15,6 +15,7 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include <unordered_set>
 
 namespace pinjamlab {
 
@@ -69,14 +70,18 @@ public:
     // it is about finding the caller that invokes it inside a loop.
     [[nodiscard]] std::vector<Item> search(const std::string& query) const {
         const std::string q = toLower(query);
-        std::vector<Item> hits;
+        std::vector<Item> matches;
         for (const Item& it : repo_.all()) {
             if (toLower(it.tag).find(q) != std::string::npos ||
                 toLower(it.model).find(q) != std::string::npos) {
-                hits.push_back(it);
+                matches.push_back(it);
             }
         }
-        return hits;
+        std::vector<Item> unique;                    // PERBAIKAN: satu hash per baris
+        std::unordered_set<std::string> seen;
+        for (const Item& item : matches)
+            if (seen.insert(item.tag).second) unique.push_back(item);
+        return unique;
     }
 
     [[nodiscard]] std::vector<Item> byCategory(const std::string& category) const {

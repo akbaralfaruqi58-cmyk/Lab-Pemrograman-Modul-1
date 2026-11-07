@@ -54,8 +54,15 @@ class CatalogService:
         inside a loop, not this function.
         """
         q = query.lower()
-        return [i for i in self._repo.all()
-                if q in i.tag.lower() or q in i.model.lower()]
+        matches = [i for i in self._repo.all()
+                   if q in i.tag.lower() or q in i.model.lower()]
+        unique = []                                  # PERBAIKAN: satu hash per baris
+        seen: set[str] = set()
+        for item in matches:
+            if item.tag not in seen:
+                seen.add(item.tag)
+                unique.append(item)
+        return unique
 
     def by_category(self, category: str) -> list[Item]:
         return [i for i in self._repo.all() if i.category == category]

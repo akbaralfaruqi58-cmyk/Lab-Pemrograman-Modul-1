@@ -1,0 +1,8 @@
+== Data A ==
+BROKEN     (3): AR-1 AR-2 AR-3
+FIXED      (3): AR-1 AR-2 AR-3
+IDIOMATIC  (3): AR-1 AR-2 AR-3
+== Data B ==
+BROKEN     (4): AR-1 LP-2 AR-2 LP-4
+FIXED      (2): AR-1 AR-2
+IDIOMATIC  (2): AR-1 AR-2
