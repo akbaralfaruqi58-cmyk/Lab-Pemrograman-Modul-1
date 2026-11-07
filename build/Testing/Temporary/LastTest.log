@@ -1,0 +1,79 @@
+Start testing: Oct 15 09:13 SE Asia Standard Time
+----------------------------------------------------------
+1/3 Testing: TestAssetTag
+1/3 Test: TestAssetTag
+Command: "E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build/test_asset_tag.exe"
+Directory: E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build
+"TestAssetTag" start time: Oct 15 09:13 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+===============================================================================
+Running test suite (3 test cases)...
+===============================================================================
+PASSED: AssetTag: Normalization and validation
+PASSED: AssetTag: 5-Case Mathematical Equality Contract
+PASSED: AssetTag: Hash Consistency and std::unordered_set Deduplication
+===============================================================================
+All tests finished: 3 passed, 0 failed.
+===============================================================================
+<end of output>
+Test time =   0.26 sec
+----------------------------------------------------------
+Test Passed.
+"TestAssetTag" end time: Oct 15 09:13 SE Asia Standard Time
+"TestAssetTag" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: TestDomain
+2/3 Test: TestDomain
+Command: "E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build/test_domain.exe"
+Directory: E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build
+"TestDomain" start time: Oct 15 09:13 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+===============================================================================
+Running test suite (5 test cases)...
+===============================================================================
+PASSED: Polymorphism: Dynamic dispatch across Equipment hierarchy
+PASSED: Equipment: State transitions and exception guards
+PASSED: Member: Encapsulation and quota limits
+PASSED: Loan: Overdue fine calculation and ordering
+PASSED: Composition over inheritance: EquipmentBundle
+===============================================================================
+All tests finished: 5 passed, 0 failed.
+===============================================================================
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"TestDomain" end time: Oct 15 09:13 SE Asia Standard Time
+"TestDomain" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: TestCustomEquipment
+3/3 Test: TestCustomEquipment
+Command: "E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build/test_custom_equipment.exe"
+Directory: E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build
+"TestCustomEquipment" start time: Oct 15 09:13 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+===============================================================================
+Running test suite (5 test cases)...
+===============================================================================
+PASSED: Spectrophotometer overrides Equipment contract and stores specifications
+PASSED: Spectrophotometer rejects invalid wavelength specifications
+PASSED: RoboticArm overrides Equipment contract and stores specifications
+PASSED: RoboticArm rejects invalid hardware specifications
+PASSED: New equipment subclasses support polymorphic dynamic dispatch
+===============================================================================
+All tests finished: 5 passed, 0 failed.
+===============================================================================
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"TestCustomEquipment" end time: Oct 15 09:13 SE Asia Standard Time
+"TestCustomEquipment" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 15 09:13 SE Asia Standard Time

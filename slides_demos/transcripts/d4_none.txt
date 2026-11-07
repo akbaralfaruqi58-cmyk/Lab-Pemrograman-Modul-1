@@ -1,0 +1,9 @@
+lookup LP-404 -> None
+Traceback (most recent call last):
+  File "C:\Users\Amirul\OneDrive\Documents\UMS\Courses\LabProg2\code\Module1\slides_demos\d4_none.py", line 21, in <module>
+    print(found.daily_fine())
+          ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'daily_fine'
+
+Python stopped at the line that was wrong.
+C++ would have dereferenced whatever that address happened to hold.

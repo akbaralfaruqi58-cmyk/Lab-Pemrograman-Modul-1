@@ -1,0 +1,9 @@
+tag      category           Rp/day
+-------  -----------------  ------
+LP-001   Laptop              50000
+LP-002   Laptop              50000
+KIT-01   EquipmentBundle     90000
+-------  -----------------  ------
+TOTAL, 1 day overdue        190000
+
+add one category tomorrow: this loop does not change.

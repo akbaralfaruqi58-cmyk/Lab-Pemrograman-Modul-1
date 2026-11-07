@@ -1,0 +1,10 @@
+asset_tag,model,category,daily_fine,state
+LP-001,ThinkPad T14 Gen 4,Laptop,50000,AVAILABLE
+LP-002,MacBook Air M2,Laptop,75000,LOANED
+PJ-001,Epson EB-X51,Projector,35000,AVAILABLE
+MS-001,Olympus CX23,Microscope,40000,MAINTENANCE
+OS-001,Rigol DS1054Z,Oscilloscope,60000,AVAILABLE
+SP-001,Spectro-UV-Vis-01,Spectrophotometer,120000,AVAILABLE
+SP-002,Spectro-UV-Vis-02,Spectrophotometer,120000,AVAILABLE
+RA-001,RoboticArm-01,RoboticArm,180000,AVAILABLE
+RA-002,RoboticArm-02,RoboticArm,180000,AVAILABLE

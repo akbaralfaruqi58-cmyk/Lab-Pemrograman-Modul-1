@@ -1,0 +1,5 @@
+loan_id,asset_tag,member_id,days_loaned,overdue_days,status
+L-501,LP-001,M-101,7,0,ACTIVE
+L-502,LP-002,M-201,14,3,OVERDUE
+L-503,PJ-001,M-102,3,0,RETURNED
+L-504,OS-001,M-301,5,2,OVERDUE

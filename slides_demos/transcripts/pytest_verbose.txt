@@ -1,0 +1,17 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-8.3.4, pluggy-1.6.0 -- C:\Users\Amirul\AppData\Local\uv\cache\builds-v0\.tmp9Rlgy0\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Amirul\OneDrive\Documents\UMS\Courses\LabProg2\code\Module1
+collecting ... collected 9 items
+
+py/tests/test_asset_tag.py::test_asset_tag_creation_and_normalization PASSED [ 11%]
+py/tests/test_asset_tag.py::test_equality_contract PASSED                [ 22%]
+py/tests/test_asset_tag.py::test_hash_consistency_and_deduplication PASSED [ 33%]
+py/tests/test_domain.py::test_abstract_class_cannot_be_instantiated PASSED [ 44%]
+py/tests/test_domain.py::test_polymorphic_daily_fine_and_dispatch PASSED [ 55%]
+py/tests/test_domain.py::test_equipment_state_transitions PASSED         [ 66%]
+py/tests/test_domain.py::test_member_quota_encapsulation PASSED          [ 77%]
+py/tests/test_domain.py::test_loan_fine_calculation_and_ordering PASSED  [ 88%]
+py/tests/test_domain.py::test_composition_over_inheritance_bundle PASSED [100%]
+
+============================== 9 passed in 0.03s ==============================

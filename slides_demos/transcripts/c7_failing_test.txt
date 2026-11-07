@@ -1,0 +1,10 @@
+===============================================================================
+Running test suite (2 test cases)...
+===============================================================================
+Assertion failed: std::hash<BadTag>{}(a) == std::hash<BadTag>{}(b) at slides_demos/cpp/c7_failing_test.cpp:34
+FAILED: Rule 5: a == b implies hash(a) == hash(b) (Exception: Assertion failed: std::hash<BadTag>{}(a) == std::hash<BadTag>{}(b))
+Assertion failed: s.size() == 3 at slides_demos/cpp/c7_failing_test.cpp:41
+FAILED: unordered_set folds three spellings of LP-001 into one (Exception: Assertion failed: s.size() == 3)
+===============================================================================
+All tests finished: 0 passed, 2 failed.
+===============================================================================

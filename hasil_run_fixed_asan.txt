@@ -1,0 +1,2 @@
+Daily fine: 120000
+FixedSpectro destructor: releasing payload

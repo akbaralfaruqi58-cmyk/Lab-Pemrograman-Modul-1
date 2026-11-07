@@ -1,0 +1,21 @@
+input           normalised   hash (FNV-1a, low 16 bits)   inserted?
+--------------  -----------  --------------------------  ---------
+"LP-001"        LP-001       0x180f                        yes
+"  lp-001  "    LP-001       0x180f                        NO - duplicate
+"Lp-001"        LP-001       0x180f                        NO - duplicate
+"PJ-001"        PJ-001       0xed75                        yes
+"MC-001"        MC-001       0x1c4f                        yes
+
+set size = 3   (5 inputs, 3 distinct assets)
+bucket_count = 13
+
+code      bucket   items in that bucket
+--------  -------  --------------------
+PJ-001    11       1
+MC-001    0        2   <- collision
+LP-001    0        2   <- collision
+
+2 of 3 keys share a bucket with another key.
+A collision is not a bug: two DIFFERENT assets landed in the
+same bucket, so the container called operator== to tell them
+apart -- and kept both. That is the contract working.

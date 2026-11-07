@@ -1,0 +1,9 @@
+# ninja log v7
+24	1530	8137335907755028	CMakeFiles/test_custom_equipment.dir/cpp/src/spectrophotometer.cpp.obj	88606d0fb84807d5
+32	1542	8137335907805189	CMakeFiles/test_custom_equipment.dir/cpp/src/robotic_arm.cpp.obj	701e00a5857cf513
+4	1933	8137335907518085	CMakeFiles/test_asset_tag.dir/cpp/tests/test_asset_tag.cpp.obj	f29883d67b0a8017
+17	1949	8137335907675014	CMakeFiles/test_custom_equipment.dir/cpp/tests/test_custom_equipment.cpp.obj	fca591b8809216f0
+1933	2146	8137335926798538	test_asset_tag.exe	1c70dab3d2c89798
+1949	2157	8137335926994149	test_custom_equipment.exe	7bd50bdf6510da0a
+11	2410	8137335907518085	CMakeFiles/test_domain.dir/cpp/tests/test_domain.cpp.obj	d420b8f685493a37
+2410	2600	8137335931556982	test_domain.exe	e2e9e43eed785990

@@ -1,0 +1,84 @@
+In file included from C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/unordered_set.h:33,
+                 from C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/unordered_set:43,
+                 from slides_demos/cpp/c6_nohash.cpp:14:
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h: In instantiation of 'class std::_Hashtable<PlainTag, PlainTag, std::allocator<PlainTag>, std::__detail::_Identity, std::equal_to<PlainTag>, std::hash<PlainTag>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >':
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/unordered_set.h:110:18:   required from 'class std::unordered_set<PlainTag>'
+  110 |       _Hashtable _M_h;
+      |                  ^~~~
+slides_demos/cpp/c6_nohash.cpp:23:34:   required from here
+   23 |     std::unordered_set<PlainTag> shelf;
+      |                                  ^~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:210:51: error: static assertion failed: hash function must be copy constructible
+  210 |       static_assert(is_copy_constructible<_Hash>::value,
+      |                                                   ^~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:210:51: note: 'std::integral_constant<bool, false>::value' evaluates to false
+slides_demos/cpp/c6_nohash.cpp: In function 'int main()':
+slides_demos/cpp/c6_nohash.cpp:23:34: error: use of deleted function 'std::unordered_set<_Value, _Hash, _Pred, _Alloc>::unordered_set() [with _Value = PlainTag; _Hash = std::hash<PlainTag>; _Pred = std::equal_to<PlainTag>; _Alloc = std::allocator<PlainTag>]'
+   23 |     std::unordered_set<PlainTag> shelf;
+      |                                  ^~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/unordered_set.h:145:7: note: 'std::unordered_set<_Value, _Hash, _Pred, _Alloc>::unordered_set() [with _Value = PlainTag; _Hash = std::hash<PlainTag>; _Pred = std::equal_to<PlainTag>; _Alloc = std::allocator<PlainTag>]' is implicitly deleted because the default definition would be ill-formed:
+  145 |       unordered_set() = default;
+      |       ^~~~~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/unordered_set.h: At global scope:
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/unordered_set.h:145:7: error: use of deleted function 'std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::_Hashtable() [with _Key = PlainTag; _Value = PlainTag; _Alloc = std::allocator<PlainTag>; _ExtractKey = std::__detail::_Identity; _Equal = std::equal_to<PlainTag>; _Hash = std::hash<PlainTag>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, true, true>]'
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:513:7: note: 'std::_Hashtable<_Key, _Value, _Alloc, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _RehashPolicy, _Traits>::_Hashtable() [with _Key = PlainTag; _Value = PlainTag; _Alloc = std::allocator<PlainTag>; _ExtractKey = std::__detail::_Identity; _Equal = std::equal_to<PlainTag>; _Hash = std::hash<PlainTag>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _RehashPolicy = std::__detail::_Prime_rehash_policy; _Traits = std::__detail::_Hashtable_traits<true, true, true>]' is implicitly deleted because the default definition would be ill-formed:
+  513 |       _Hashtable() = default;
+      |       ^~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:513:7: error: use of deleted function 'std::__detail::_Hashtable_base<_Key, _Value, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _Traits>::_Hashtable_base() [with _Key = PlainTag; _Value = PlainTag; _ExtractKey = std::__detail::_Identity; _Equal = std::equal_to<PlainTag>; _Hash = std::hash<PlainTag>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _Traits = std::__detail::_Hashtable_traits<true, true, true>]'
+In file included from C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:37:
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1395:7: note: 'std::__detail::_Hashtable_base<_Key, _Value, _ExtractKey, _Equal, _Hash, _RangeHash, _Unused, _Traits>::_Hashtable_base() [with _Key = PlainTag; _Value = PlainTag; _ExtractKey = std::__detail::_Identity; _Equal = std::equal_to<PlainTag>; _Hash = std::hash<PlainTag>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; _Traits = std::__detail::_Hashtable_traits<true, true, true>]' is implicitly deleted because the default definition would be ill-formed:
+ 1395 |       _Hashtable_base() = default;
+      |       ^~~~~~~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1395:7: error: use of deleted function 'std::__detail::_Hash_code_base<_Key, _Value, _ExtractKey, _Hash, _RangeHash, _Unused, <anonymous> >::_Hash_code_base() [with _Key = PlainTag; _Value = PlainTag; _ExtractKey = std::__detail::_Identity; _Hash = std::hash<PlainTag>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; bool <anonymous> = true]'
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1062:7: note: 'std::__detail::_Hash_code_base<_Key, _Value, _ExtractKey, _Hash, _RangeHash, _Unused, <anonymous> >::_Hash_code_base() [with _Key = PlainTag; _Value = PlainTag; _ExtractKey = std::__detail::_Identity; _Hash = std::hash<PlainTag>; _RangeHash = std::__detail::_Mod_range_hashing; _Unused = std::__detail::_Default_ranged_hash; bool <anonymous> = true]' is implicitly deleted because the default definition would be ill-formed:
+ 1062 |       _Hash_code_base() = default;
+      |       ^~~~~~~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1062:7: error: use of deleted function 'std::__detail::_Hashtable_ebo_helper<std::hash<PlainTag>, true>::~_Hashtable_ebo_helper()'
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1013:12: note: 'std::__detail::_Hashtable_ebo_helper<std::hash<PlainTag>, true>::~_Hashtable_ebo_helper()' is implicitly deleted because the default definition would be ill-formed:
+ 1013 |     struct _Hashtable_ebo_helper
+      |            ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1013:12: error: use of deleted function 'std::hash<PlainTag>::~hash()'
+In file included from C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/string_view:52,
+                 from C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/basic_string.h:51,
+                 from C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/string:56,
+                 from slides_demos/cpp/c6_nohash.cpp:13:
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/functional_hash.h:104:12: note: 'std::hash<PlainTag>::~hash()' is implicitly deleted because the default definition would be ill-formed:
+  104 |     struct hash
+      |            ^~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/functional_hash.h:104:12: error: use of deleted function 'std::__hash_not_enabled<_Tp>::~__hash_not_enabled() [with _Tp = PlainTag]'
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/functional_hash.h:87:7: note: declared here
+   87 |       ~__hash_not_enabled() = delete;
+      |       ^
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1395:7: note: use '-fdiagnostics-all-candidates' to display considered candidates
+ 1395 |       _Hashtable_base() = default;
+      |       ^~~~~~~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1395:7: error: use of deleted function 'std::__detail::_Hash_code_base<PlainTag, PlainTag, std::__detail::_Identity, std::hash<PlainTag>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, true>::~_Hash_code_base()'
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1043:12: note: 'std::__detail::_Hash_code_base<PlainTag, PlainTag, std::__detail::_Identity, std::hash<PlainTag>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, true>::~_Hash_code_base()' is implicitly deleted because the default definition would be ill-formed:
+ 1043 |     struct _Hash_code_base
+      |            ^~~~~~~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1043:12: error: use of deleted function 'std::__detail::_Hashtable_ebo_helper<std::hash<PlainTag>, true>::~_Hashtable_ebo_helper()'
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:513:7: note: use '-fdiagnostics-all-candidates' to display considered candidates
+  513 |       _Hashtable() = default;
+      |       ^~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:513:7: error: use of deleted function 'std::__detail::_Hashtable_base<PlainTag, PlainTag, std::__detail::_Identity, std::equal_to<PlainTag>, std::hash<PlainTag>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Hashtable_traits<true, true, true> >::~_Hashtable_base()'
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1372:12: note: 'std::__detail::_Hashtable_base<PlainTag, PlainTag, std::__detail::_Identity, std::equal_to<PlainTag>, std::hash<PlainTag>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Hashtable_traits<true, true, true> >::~_Hashtable_base()' is implicitly deleted because the default definition would be ill-formed:
+ 1372 |     struct _Hashtable_base
+      |            ^~~~~~~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable_policy.h:1372:12: error: use of deleted function 'std::__detail::_Hash_code_base<PlainTag, PlainTag, std::__detail::_Identity, std::hash<PlainTag>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, true>::~_Hash_code_base()'
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:513:7: error: use of deleted function 'constexpr std::_Enable_default_constructor<false, _Tag>::_Enable_default_constructor() [with _Tag = std::__detail::_Hash_node_base]'
+  513 |       _Hashtable() = default;
+      |       ^~~~~~~~~~
+In file included from C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:38:
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/enable_special_members.h:115:15: note: declared here
+  115 |     constexpr _Enable_default_constructor() noexcept = delete;
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:513:7: note: use '-fdiagnostics-all-candidates' to display considered candidates
+  513 |       _Hashtable() = default;
+      |       ^~~~~~~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/unordered_set.h:145:7: note: use '-fdiagnostics-all-candidates' to display considered candidates
+  145 |       unordered_set() = default;
+      |       ^~~~~~~~~~~~~
+slides_demos/cpp/c6_nohash.cpp: In function 'int main()':
+slides_demos/cpp/c6_nohash.cpp:23:34: note: use '-fdiagnostics-all-candidates' to display considered candidates
+   23 |     std::unordered_set<PlainTag> shelf;
+      |                                  ^~~~~

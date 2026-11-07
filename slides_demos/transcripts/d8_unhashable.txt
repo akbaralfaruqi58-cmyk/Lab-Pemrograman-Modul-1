@@ -1,0 +1,6 @@
+PlainTag('LP-001') == PlainTag('  lp-001  ') ? True
+PlainTag.__hash__ is None   <- Python set it for you
+Traceback (most recent call last):
+  File "C:\Users\Amirul\OneDrive\Documents\UMS\Courses\LabProg2\code\Module1\slides_demos\d8_unhashable.py", line 23, in <module>
+    {PlainTag("LP-001")}
+TypeError: unhashable type: 'PlainTag'

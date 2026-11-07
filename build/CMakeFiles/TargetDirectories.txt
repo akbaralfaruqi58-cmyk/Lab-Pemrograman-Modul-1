@@ -1,0 +1,6 @@
+E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build/CMakeFiles/test_asset_tag.dir
+E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build/CMakeFiles/test_domain.dir
+E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build/CMakeFiles/test_custom_equipment.dir
+E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build/CMakeFiles/test.dir
+E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build/CMakeFiles/edit_cache.dir
+E:/Matkul Pak Amirul/Lab Pemrograman II/Modul1/Lab2_1/build/CMakeFiles/rebuild_cache.dir

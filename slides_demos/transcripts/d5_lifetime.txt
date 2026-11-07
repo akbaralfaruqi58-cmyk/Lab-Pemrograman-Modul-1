@@ -1,0 +1,14 @@
+enter scope_a
+  + A constructed
+  - A released
+leave scope_a
+enter scope_b
+  + B constructed
+leave scope_b
+  - B released
+enter scope_c
+  + C constructed
+leave scope_c
+after scope_c, still alive: ['C']
+  - C released
+keep.clear() ran

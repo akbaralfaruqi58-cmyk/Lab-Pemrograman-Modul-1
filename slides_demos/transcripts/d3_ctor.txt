@@ -1,0 +1,7 @@
+AssetTag('LP-001') -> LP-001
+AssetTag('  lp-001  ') -> LP-001
+AssetTag('Lp-001') -> LP-001
+AssetTag('') -> REFUSED: AssetTag cannot be empty.
+AssetTag('   ') -> REFUSED: AssetTag cannot be empty.
+Laptop(ram_gb=0) -> REFUSED: RAM must be positive.
+constructed -> Laptop(tag=AssetTag('LP-002'), model='ThinkPad T14', ram=16GB, cpu='Core i7') | Rp 50,000

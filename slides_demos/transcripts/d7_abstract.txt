@@ -1,0 +1,2 @@
+Equipment   -> REFUSED: Can't instantiate abstract class Equipment without an implementation for abstract methods 'category_name', 'daily_fine'
+Microscope  -> REFUSED: Can't instantiate abstract class Microscope without an implementation for abstract method 'category_name'

@@ -1,0 +1,17 @@
+A. base destructor NOT virtual
+  dailyFine() -> 50000   (dispatch still works)
+  ~BadBase
+
+B. base destructor virtual
+  dailyFine() -> 50000
+  ~GoodLaptop (frees serial)
+  ~GoodBase
+
+C. the same fix, spelled unique_ptr
+  leaving the scope now
+  ~GoodLaptop (frees serial)
+  ~GoodBase
+
+In A the derived destructor never ran, so `serial` was
+never freed -- and dailyFine() dispatched correctly the whole
+time, which is why nothing looks wrong from the outside.

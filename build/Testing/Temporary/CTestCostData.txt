@@ -1,0 +1,4 @@
+TestAssetTag 1 0.259284
+TestDomain 1 0.0592808
+TestCustomEquipment 1 0.0590915
+---

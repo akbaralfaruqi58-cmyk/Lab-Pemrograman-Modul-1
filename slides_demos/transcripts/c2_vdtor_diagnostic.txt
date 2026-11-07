@@ -1,0 +1,4 @@
+slides_demos/cpp/c2_vdtor.cpp: In function 'int main()':
+slides_demos/cpp/c2_vdtor.cpp:50:9: warning: deleting object of polymorphic class type 'BadBase' which has non-virtual destructor might cause undefined behavior [-Wdelete-non-virtual-dtor]
+   50 |         delete p;
+      |         ^~~~~~~~

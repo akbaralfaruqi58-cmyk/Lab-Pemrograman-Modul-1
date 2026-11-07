@@ -1,0 +1,12 @@
+In file included from C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/unordered_set.h:33,
+                 from C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/unordered_set:43,
+                 from slides_demos/cpp/c6_nohash.cpp:14:
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h: In instantiation of 'class std::_Hashtable<PlainTag, PlainTag, std::allocator<PlainTag>, std::__detail::_Identity, std::equal_to<PlainTag>, std::hash<PlainTag>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >':
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/unordered_set.h:110:18:   required from 'class std::unordered_set<PlainTag>'
+  110 |       _Hashtable _M_h;
+      |                  ^~~~
+slides_demos/cpp/c6_nohash.cpp:23:34:   required from here
+   23 |     std::unordered_set<PlainTag> shelf;
+      |                                  ^~~~~
+C:/Users/Amirul/scoop/apps/gcc/15.2.0/include/c++/15.2.0/bits/hashtable.h:210:51: error: static assertion failed: hash function must be copy constructible
+  210 |       static_assert(is_copy_constructible<_Hash>::value,

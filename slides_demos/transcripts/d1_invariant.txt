@@ -1,0 +1,4 @@
+Member(id='M-101', name='Ayu Lestari', role=STUDENT, active=0/2) | quota: 2
+after 2 loans -> Member(id='M-101', name='Ayu Lestari', role=STUDENT, active=2/2) | can borrow a 3rd? False
+REFUSED: Member Ayu Lestari (M-101) has reached maximum quota (2).
+bypassed -> Member(id='M-101', name='Ayu Lestari', role=STUDENT, active=0/2) <- the object is now lying about itself

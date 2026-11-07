@@ -1,0 +1,5 @@
+member_id,name,role,max_loans,active_loans
+M-101,Budi Santoso,STUDENT,2,1
+M-102,Siti Rahmawati,STUDENT,2,0
+M-201,Dr. Hendra Wijaya,FACULTY,5,1
+M-301,Agus Pratama,STAFF,3,0

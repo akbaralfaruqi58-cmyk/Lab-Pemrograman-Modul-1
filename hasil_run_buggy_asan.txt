@@ -1,0 +1,11 @@
+
+=================================================================
+==666==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 16384 byte(s) in 1 object(s) allocated from:
+    #0 0x7f9261f0c8d8 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
+    #1 0x5610db85423d in BrokenSpectro::BrokenSpectro() lab2_3/buggy/defect_b_buggy.cpp:16
+    #2 0x5610db85423d in main lab2_3/buggy/defect_b_buggy.cpp:27
+    #3 0x7f92618c7ca7  (/lib/x86_64-linux-gnu/libc.so.6+0x29ca7) (BuildId: c495b62edadd6c356265942ec1282d98058a7b41)
+
+SUMMARY: AddressSanitizer: 16384 byte(s) leaked in 1 allocation(s).

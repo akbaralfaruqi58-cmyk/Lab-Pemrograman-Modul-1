@@ -1,0 +1,5 @@
+a = LP-001 | b = LP-001
+a == b ? True  (same VALUE)
+a is b ? False  (different OBJECTS)
+c is a ? True  (assignment copied the handle, not the object)
+shelf grew to 3 items <- the function reached the caller's list

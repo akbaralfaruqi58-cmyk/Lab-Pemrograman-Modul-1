@@ -1,0 +1,4 @@
+LP-001   Laptop              50000
+LP-002   Laptop              50000
+KIT-01   EquipmentBundle     90000
+TOTAL, 1 day overdue        190000

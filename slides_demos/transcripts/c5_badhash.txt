@@ -1,0 +1,13 @@
+a == b          ? true   <- operator== says they are the same asset
+hash(a) == hash(b)? false   <- and the hash disagrees
+
+5 inputs, 3 distinct assets -> set size = 5   (expected 3)
+
+  kept: MC-001      (raw "MC-001")
+  kept: PJ-001      (raw "PJ-001")
+  kept: LP-001      (raw "Lp-001")
+  kept: LP-001      (raw "  lp-001  ")
+  kept: LP-001      (raw "LP-001")
+
+No exception. No warning. No compiler error. The inventory
+now reports three laptops where one is on the shelf.

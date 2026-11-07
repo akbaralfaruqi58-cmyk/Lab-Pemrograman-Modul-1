@@ -1,0 +1,15 @@
+1. manual cleanup, no exception
+    + manual acquired
+    - manual released
+
+2. manual cleanup, validate() throws
+    + manual acquired
+    caught: overdueDays cannot be negative   <- no 'released' line above
+
+3. RAII, validate() throws
+    + raii acquired
+    - raii released
+    caught: overdueDays cannot be negative
+
+Read case 2 against case 3. Same failure, same message,
+and only one of them still owns the handle.
