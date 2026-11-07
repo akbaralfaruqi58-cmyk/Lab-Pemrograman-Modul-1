@@ -1,0 +1,16 @@
+implementation,n,ns_per_lookup,lookups_per_batch
+cpp_vector_linear_scan,100,520.0,200
+cpp_std_unordered_map,100,59.8,200000
+cpp_handbuilt_hashmap,100,52.2,200000
+cpp_vector_linear_scan,10000,48411.0,200
+cpp_std_unordered_map,10000,120.2,200000
+cpp_handbuilt_hashmap,10000,75.7,200000
+cpp_vector_linear_scan,1000000,4842832.0,200
+cpp_std_unordered_map,1000000,368.3,200000
+cpp_handbuilt_hashmap,1000000,234.1,200000
+py_list_linear_scan,100,4960.5,200
+py_dict,100,206.0,200000
+py_list_linear_scan,10000,864550.0,200
+py_dict,10000,308.4,200000
+py_list_linear_scan,1000000,62159798.5,200
+py_dict,1000000,703.4,200000
