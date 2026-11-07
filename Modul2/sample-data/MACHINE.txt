@@ -1,0 +1,7 @@
+CPU       : Intel Core i5-8250U @ 1.60 GHz (4 core, 8 thread)
+RAM       : 11,9 GB
+OS        : Windows 10 Pro
+Compiler  : g++ (MSYS2) 16.2.0, -std=c++20 -O2
+Python    : 3.12.0
+Catatan   : bench-results.csv (hasil pertama) diukur sebelum PREDICTION.md ditulis.
+            bench-a3-*.csv dan bukti/a4_extra.txt diukur setelah PREDICTION.md di-commit.
