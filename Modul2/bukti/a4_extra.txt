@@ -1,0 +1,17 @@
+E1_collision,n=100,hash_normal_ns=46.9,hash_all_collide_ns=443.7,vector_scan_ns=456.2,longest_chain=100
+E1_collision,n=1000,hash_normal_ns=50.9,hash_all_collide_ns=4333.6,vector_scan_ns=3841.7,longest_chain=1000
+E1_collision,n=10000,hash_normal_ns=74.2,hash_all_collide_ns=97999.8,vector_scan_ns=43788.8,longest_chain=10000
+E2_longkey,key_len=16,n=16,hash_ns=46.8,scan_ns=87.2
+E2_longkey,key_len=16,n=64,hash_ns=51.8,scan_ns=297.6
+E2_longkey,key_len=16,n=256,hash_ns=53.8,scan_ns=1028.5
+E2_longkey,key_len=16,n=1024,hash_ns=54.5,scan_ns=3962.2
+E2_longkey,key_len=1024,n=16,hash_ns=537.2,scan_ns=247.6
+E2_longkey,key_len=1024,n=64,hash_ns=559.9,scan_ns=442.1
+E2_longkey,key_len=1024,n=256,hash_ns=593.3,scan_ns=1161.4
+E2_longkey,key_len=1024,n=1024,hash_ns=632.0,scan_ns=4430.1
+E2_longkey,key_len=8192,n=16,hash_ns=3877.9,scan_ns=2296.9
+E2_longkey,key_len=8192,n=64,hash_ns=3952.3,scan_ns=1775.5
+E2_longkey,key_len=8192,n=256,hash_ns=3998.6,scan_ns=2985.2
+E2_longkey,key_len=8192,n=1024,hash_ns=4201.5,scan_ns=6134.9
+E3_pause,n=1000000,median_insert_ns=400,p99_insert_ns=900,max_insert_ms=134.94,max_at_insert=786434,inserts_over_1ms=6,rehashes=18
+E4_range,n=100000,hits=100,std_map_us_per_query=3.58,unordered_map_us_per_query=5690.14
