@@ -1,0 +1,7 @@
+baris dibaca = 53
+sizeof(std::string)             = 32
+sizeof(LinkedList<string>::Node) = 40
+
+LinkedList: elemen=53 panggilan new=53 byte diminta=2120
+vector    : elemen=53 panggilan new=7 byte diminta=4064 (capacity=64)
+vector+reserve: panggilan new=1 byte diminta=1696
