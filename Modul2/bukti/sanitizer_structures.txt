@@ -1,0 +1,23 @@
+# ASan+UBSan: test_structures.cpp
+# Lingkungan: Ubuntu 24.04 (sandbox), g++ 13.3.0, -std=c++20 -g -fsanitize=address,undefined -fno-omit-frame-pointer
+# Alasan: WSL tidak bisa dipasang di laptop (0x80070422, AppXSvc tidak bisa start)
+# Kode keluar: 0
+
+===============================================================================
+Running test suite (8 test cases)...
+===============================================================================
+PASSED: Stack: LIFO order and empty-stack guards
+PASSED: Queue: FIFO order survives wrap-around and growth
+PASSED: LinkedList: pointer surgery keeps order, size and tail correct
+PASSED: LinkedList: Rule of Five gives a deep copy, not a shared one
+PASSED: HashMap: matches std::unordered_map on the same key sequence
+PASSED: HashMap: rehash preserves every entry and lowers the load factor
+  rows=53 unique(mine)=50 unique(std)=50
+  erased=18 left(mine)=32 left(std)=32
+PASSED: A2 HashMap vs std::unordered_map on my-catalog.csv (insert, find, erase)
+  after inserts: size(mine)=53 size(vector)=53
+  after 20 erases: size(mine)=33 size(vector)=33
+PASSED: A2 LinkedList vs std::vector on the same add/insert/erase script
+===============================================================================
+All tests finished: 8 passed, 0 failed.
+===============================================================================

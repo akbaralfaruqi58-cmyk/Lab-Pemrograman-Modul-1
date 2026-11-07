@@ -1,0 +1,18 @@
+# ASan+UBSan: b_demo.cpp (Cacat B)
+# Lingkungan: Ubuntu 24.04 (sandbox), g++ 13.3.0, -std=c++20 -g -fsanitize=address,undefined -fno-omit-frame-pointer
+# Alasan: WSL tidak bisa dipasang di laptop (0x80070422, AppXSvc tidak bisa start)
+# Kode keluar: 0
+
+== Data A ==
+BROKEN     (3): AR-1 AR-2 AR-3
+FIXED      (3): AR-1 AR-2 AR-3
+IDIOMATIC  (3): AR-1 AR-2 AR-3
+== Data B ==
+BROKEN     (4): AR-1 LP-2 AR-2 LP-4
+FIXED      (2): AR-1 AR-2
+IDIOMATIC  (2): AR-1 AR-2
+
+# Catatan: ASan/UBSan TIDAK melaporkan apa pun pada Cacat B. erase() hanya menggeser elemen
+# (tidak ada akses di luar buffer, tidak ada free), jadi bukan error memori bagi ASan.
+# Data B tetap menghasilkan keluaran SALAH (4 elemen, benar 2) -> bug logika, bukan bug memori.
+# Pembeda yang efektif: -D_GLIBCXX_DEBUG (lihat bukti/b_glibcxx_debug.txt) -> "singular iterator".

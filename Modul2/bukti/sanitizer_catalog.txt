@@ -1,0 +1,16 @@
+# ASan+UBSan: test_catalog.cpp (search() versi perbaikan)
+# Lingkungan: Ubuntu 24.04 (sandbox), g++ 13.3.0, -std=c++20 -g -fsanitize=address,undefined -fno-omit-frame-pointer
+# Alasan: WSL tidak bisa dipasang di laptop (0x80070422, AppXSvc tidak bisa start)
+# Kode keluar: 0
+
+===============================================================================
+Running test suite (5 test cases)...
+===============================================================================
+PASSED: Catalogue loads all 20 committed rows
+PASSED: A duplicate tag is rejected, not overwritten
+PASSED: search() is case-insensitive over tag and model
+PASSED: byCategory partitions the catalogue exactly
+PASSED: contains() goes through the index and agrees with byTag()
+===============================================================================
+All tests finished: 5 passed, 0 failed.
+===============================================================================
