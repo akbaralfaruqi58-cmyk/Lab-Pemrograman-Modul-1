@@ -1,2 +1,4 @@
-n=100,search_ms=0.9,hits=100
-n=1000,search_ms=125.5,hits=1000
+n=100,search_ms=0.7,hits=100
+n=1000,search_ms=66.3,hits=1000
+n=10000,search_ms=6370.3,hits=10000
+berhenti: n=30000 diperkirakan > 20 detik (dari n=10000: 6370.3 ms)
