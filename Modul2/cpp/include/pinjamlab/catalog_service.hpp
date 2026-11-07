@@ -15,6 +15,7 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include <unordered_set>
 
 namespace pinjamlab {
 
@@ -67,7 +68,7 @@ public:
     // This is O(n) by design: it is a SUBSTRING search, and no hash index can
     // answer one. Lab 2's diagnose-and-fix is NOT about making this O(1) --
     // it is about finding the caller that invokes it inside a loop.
-        [[nodiscard]] std::vector<Item> search(const std::string& query) const {
+    [[nodiscard]] std::vector<Item> search(const std::string& query) const {
         const std::string q = toLower(query);
         std::vector<Item> matches;
         for (const Item& it : repo_.all()) {
@@ -76,13 +77,10 @@ public:
                 matches.push_back(it);
             }
         }
-        std::vector<Item> unique;                    // CACAT A: buang duplikat
-        for (const Item& item : matches) {
-            bool dup = false;
-            for (const Item& kept : unique)          // memindai semua yang sudah disimpan
-                if (kept.tag == item.tag) { dup = true; break; }
-            if (!dup) unique.push_back(item);
-        }
+        std::vector<Item> unique;                    // PERBAIKAN: satu hash per baris
+        std::unordered_set<std::string> seen;
+        for (const Item& item : matches)
+            if (seen.insert(item.tag).second) unique.push_back(item);
         return unique;
     }
 
