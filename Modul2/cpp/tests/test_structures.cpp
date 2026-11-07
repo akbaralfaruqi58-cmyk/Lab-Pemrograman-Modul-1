@@ -13,6 +13,10 @@
 #include <unordered_map>
 #include <vector>
 
+#include <fstream>
+#include <iostream>
+#include <stdexcept>
+
 using namespace pinjamlab::structures;
 
 TEST_CASE("Stack: LIFO order and empty-stack guards") {
@@ -114,6 +118,85 @@ TEST_CASE("HashMap: rehash preserves every entry and lowers the load factor") {
         REQUIRE(got.has_value());
         REQUIRE(*got == i * i);
     }
+}
+
+// ---- A2: kesesuaian pada katalog saya ------------------------------------
+static std::vector<std::string> readTags(const std::string& path) {
+    std::ifstream in(path);
+    if (!in) throw std::runtime_error("cannot open " + path);
+    std::vector<std::string> tags;
+    std::string line;
+    std::getline(in, line);                       // header
+    while (std::getline(in, line))
+        if (!line.empty()) tags.push_back(line.substr(0, line.find(',')));
+    return tags;
+}
+
+TEST_CASE("A2 HashMap vs std::unordered_map on my-catalog.csv (insert, find, erase)") {
+    const auto tags = readTags("sample-data/my-catalog.csv");
+    HashMap<std::string, int> mine;
+    std::unordered_map<std::string, int> theirs;
+
+    for (std::size_t i = 0; i < tags.size(); ++i) {
+        mine.insert(tags[i], static_cast<int>(i));
+        theirs[tags[i]] = static_cast<int>(i);    // [] menimpa, seperti insert()
+    }
+    std::cout << "  rows=" << tags.size() << " unique(mine)=" << mine.size()
+              << " unique(std)=" << theirs.size() << "\n";
+    REQUIRE(mine.size() == theirs.size());
+    for (const auto& [k, v] : theirs) {
+        const auto got = mine.find(k);
+        REQUIRE(got.has_value());
+        REQUIRE(*got == v);                       // nilai sama, termasuk duplikat yang tertimpa
+    }
+
+    int erased = 0;                               // skrip erase yang sama di keduanya
+    for (std::size_t i = 0; i < tags.size(); i += 3) {
+        const bool a = mine.erase(tags[i]);
+        const bool b = theirs.erase(tags[i]) > 0;
+        REQUIRE(a == b);                          // termasuk jawaban "sudah tidak ada"
+        if (a) ++erased;
+    }
+    std::cout << "  erased=" << erased << " left(mine)=" << mine.size()
+              << " left(std)=" << theirs.size() << "\n";
+    REQUIRE(mine.size() == theirs.size());
+    for (const auto& t : tags)
+        REQUIRE(mine.contains(t) == (theirs.count(t) > 0));
+}
+
+TEST_CASE("A2 LinkedList vs std::vector on the same add/insert/erase script") {
+    const auto tags = readTags("sample-data/my-catalog.csv");
+    LinkedList<std::string> mine;
+    std::vector<std::string> theirs;
+
+    for (std::size_t i = 0; i < tags.size(); ++i) {
+        if (i % 3 == 0) {
+            mine.pushBack(tags[i]);
+            theirs.push_back(tags[i]);
+        } else if (i % 3 == 1) {
+            mine.pushFront(tags[i]);
+            theirs.insert(theirs.begin(), tags[i]);
+        } else {
+            const std::size_t pos = (i * 7) % theirs.size();
+            REQUIRE(mine.insertAfter(pos, tags[i]));
+            theirs.insert(theirs.begin() + static_cast<std::ptrdiff_t>(pos) + 1, tags[i]);
+        }
+    }
+    std::cout << "  after inserts: size(mine)=" << mine.size()
+              << " size(vector)=" << theirs.size() << "\n";
+    REQUIRE(mine.size() == theirs.size());
+    REQUIRE((mine.toVector() == theirs));
+
+    for (std::size_t j = 0; j < 20; ++j) {
+        const std::size_t pos = (j * 5) % theirs.size();
+        REQUIRE(mine.erase(pos));
+        theirs.erase(theirs.begin() + static_cast<std::ptrdiff_t>(pos));
+        REQUIRE((mine.toVector() == theirs));     // identik setelah SETIAP erase
+    }
+    for (std::size_t i = 0; i < theirs.size(); ++i)
+        REQUIRE(*mine.at(i) == theirs[i]);
+    std::cout << "  after 20 erases: size(mine)=" << mine.size()
+              << " size(vector)=" << theirs.size() << "\n";
 }
 
 int main() { return test_runner::runAll(); }
