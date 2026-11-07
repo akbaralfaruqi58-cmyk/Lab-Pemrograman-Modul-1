@@ -1,0 +1,60 @@
+diff --git a/Modul2/cpp/include/pinjamlab/catalog_service.hpp b/Modul2/cpp/include/pinjamlab/catalog_service.hpp
+index e3aa699..515ee32 100644
+--- a/Modul2/cpp/include/pinjamlab/catalog_service.hpp
++++ b/Modul2/cpp/include/pinjamlab/catalog_service.hpp
+@@ -15,6 +15,7 @@
+ #include <stdexcept>
+ #include <string>
+ #include <vector>
++#include <unordered_set>
+ 
+ namespace pinjamlab {
+ 
+@@ -67,7 +68,7 @@ public:
+     // This is O(n) by design: it is a SUBSTRING search, and no hash index can
+     // answer one. Lab 2's diagnose-and-fix is NOT about making this O(1) --
+     // it is about finding the caller that invokes it inside a loop.
+-        [[nodiscard]] std::vector<Item> search(const std::string& query) const {
++    [[nodiscard]] std::vector<Item> search(const std::string& query) const {
+         const std::string q = toLower(query);
+         std::vector<Item> matches;
+         for (const Item& it : repo_.all()) {
+@@ -76,13 +77,10 @@ public:
+                 matches.push_back(it);
+             }
+         }
+-        std::vector<Item> unique;                    // CACAT A: buang duplikat
+-        for (const Item& item : matches) {
+-            bool dup = false;
+-            for (const Item& kept : unique)          // memindai semua yang sudah disimpan
+-                if (kept.tag == item.tag) { dup = true; break; }
+-            if (!dup) unique.push_back(item);
+-        }
++        std::vector<Item> unique;                    // PERBAIKAN: satu hash per baris
++        std::unordered_set<std::string> seen;
++        for (const Item& item : matches)
++            if (seen.insert(item.tag).second) unique.push_back(item);
+         return unique;
+     }
+ 
+diff --git a/Modul2/py/pinjamlab/catalog_service.py b/Modul2/py/pinjamlab/catalog_service.py
+index edb741f..a00d4ba 100644
+--- a/Modul2/py/pinjamlab/catalog_service.py
++++ b/Modul2/py/pinjamlab/catalog_service.py
+@@ -56,12 +56,11 @@ class CatalogService:
+         q = query.lower()
+         matches = [i for i in self._repo.all()
+                    if q in i.tag.lower() or q in i.model.lower()]
+-        unique = []                                  # CACAT A: buang duplikat
++        unique = []                                  # PERBAIKAN: satu hash per baris
++        seen: set[str] = set()
+         for item in matches:
+-            for kept in unique:                      # memindai semua yang sudah disimpan
+-                if kept.tag == item.tag:
+-                    break
+-            else:
++            if item.tag not in seen:
++                seen.add(item.tag)
+                 unique.append(item)
+         return unique
+ 
