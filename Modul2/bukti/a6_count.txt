@@ -1,0 +1,2 @@
+n=1000 hits=1000 perbandingan=499500  n(n-1)/2=499500
+n=10000 hits=10000 perbandingan=49995000  n(n-1)/2=49995000
